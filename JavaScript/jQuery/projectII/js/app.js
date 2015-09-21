@@ -6,5 +6,10 @@ $(".spoiler span").hide();
 //2 - Add a button
 $(".spoiler").append("<button>Reveal Spoiler!</button>");
 //3 - When button pressed
+$("button").click(function(){
+	$('span').show();
+	$(this).hide();
+	
+})
 	//3.1 - Show spoiler 
 	//3.2 - Get rid of button
