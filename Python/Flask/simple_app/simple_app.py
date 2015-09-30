@@ -14,9 +14,20 @@ def index(name="Treehouse"):
 	return "Hello from {}".format(name)
 
 @app.route('/add/<num1>/<num2>')
-def a(num1, num2):
-	return "{} + {} = {}".format(num1, num2, num1 + num2) #Q - how does the above route know to call this function, irrespective of
+# def add(num1, num2):
+# 	return "{} + {} = {}".format(num1, num2, num1 + num2) #Q - how does the above route know to call this function, irrespective of
 		#what this is named 'add' or 'a' etc.
+
+def add(num1, num2):
+	return """
+	<!doctype html>
+	<html>
+	<head><title>Adding!</title></head>
+	<body>
+		<h1>{} + {} = {} </h1>
+	</body>
+	</html>
+	""".format(num1, num2, num1+num2)
 
 
 # @app.route('/multiply')
@@ -27,8 +38,10 @@ def a(num1, num2):
 #     #return str(num1*num2)
 
 @app.route('/multiply')
-
-def multiply():
-	return str(5*5)
-
+@app.route('/multiply/<int:num1>/<int:num2>') #Q - it seems that the parameter (say num1) here should match the parameter name
+#being passed to the multiply function, correct?
+# def multiply(num):
+# 	return str(5*5)
+def multiply(num1=5,num2=5):
+  return str(num1*num2)
 app.run(debug=True, port=8000, host='0.0.0.0')  #debug=True reloads whenever code changes
