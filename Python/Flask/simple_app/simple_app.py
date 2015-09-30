@@ -14,7 +14,21 @@ def index(name="Treehouse"):
 	return "Hello from {}".format(name)
 
 @app.route('/add/<num1>/<num2>')
-def add(num1, num2):
-	return "{} + {} = {}".format(num1, num2, num1 + num2)
+def a(num1, num2):
+	return "{} + {} = {}".format(num1, num2, num1 + num2) #Q - how does the above route know to call this function, irrespective of
+		#what this is named 'add' or 'a' etc.
+
+
+# @app.route('/multiply')
+# #@app.route('/multiply/<int:num1>/<int:num2>')
+# def multiply():
+#   	return str(5*5)
+#     #return '{}'.format(num1, num2, num1*num2)
+#     #return str(num1*num2)
+
+@app.route('/multiply')
+
+def multiply():
+	return str(5*5)
 
 app.run(debug=True, port=8000, host='0.0.0.0')  #debug=True reloads whenever code changes
