@@ -24,7 +24,7 @@ def add(num1, num2):
 	<html>
 	<head><title>Adding!</title></head>
 	<body>
-		<h1>{} + {} = {} </h1>
+		<h1>{} + {} = {} </h1> #this is too much typing
 	</body>
 	</html>
 	""".format(num1, num2, num1+num2)

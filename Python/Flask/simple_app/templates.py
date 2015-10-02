@@ -7,7 +7,7 @@ app = Flask(__name__)
 #renders it when it comes across it in a view
 @app.route('/')
 @app.route('/<name>')
-def index(name):
+def index(name="Treehouse"):
 	return render_template("index.html", name=name)
 
 @app.route('/')
