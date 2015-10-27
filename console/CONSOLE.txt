@@ -1,3 +1,5 @@
 ls is list
 ls -l. the -l means long form. the -rw-r--r-- signify the permission of what to do with that file
 pwd means current working directory
+
+Hello! editing using nano
