@@ -3,3 +3,4 @@ ls -l. the -l means long form. the -rw-r--r-- signify the permission of what to 
 pwd means current working directory
 
 Hello! editing using nano
+using mv (move) you can rename a file, the first input after the mv command is the current name followed by the name we'd like to change the name to
