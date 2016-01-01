@@ -8,6 +8,7 @@
     <div class="container" ng-controller="GuessTheNumberController">
       <h2> Guess the number! </h2>
       <p class="well lead"> Guess the computer generated random number between 1 to 1000 </p>
+      <!-- QUESTIONS - ng-model="guess", is what does that mean -->
       <label> Your guess: </label><input type="number" ng-model="guess" /><!-- {{guess}} -->
       <button ng-click="verifyGuess()" class="btn btn-warning btn-sm"> Verify </button>
       <button ng-click="initializeGame()" class="btn btn-warning btn-sm"> Restart </button>
@@ -27,6 +28,8 @@
       //the body. second is module dependencies
       //angular.module creates a module and returns module object that has
       //a controller function allowing controller registration
+
+      //QUESTION. which is the model/which is controller (well, controller is obvious)
       angular.module('app',[])
       .controller('GuessTheNumberController', GuessTheNumberController);
       function GuessTheNumberController($scope) {
