@@ -13,6 +13,7 @@
       <button ng-click="verifyGuess()" class="btn btn-warning btn-sm"> Verify </button>
       <button ng-click="initializeGame()" class="btn btn-warning btn-sm"> Restart </button>
       <p>
+        <!-- what is the bottom called, adding functionality in code? -->
         <p ng-show="deviation<0" class="alert alert-warning"> Your guess is higher </p>
         <p ng-show="deviation>0" class="alert alert-warning"> Your guess is lower </p>
         <p ng-show="deviation===0" class="alert alert-success"> Yes! that's it </p>
