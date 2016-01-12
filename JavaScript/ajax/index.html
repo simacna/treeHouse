@@ -13,7 +13,9 @@
       document.getElementById('ajax').innerHTML = xhr.responseText;
     }
   };
-  xhr.send();
+  function loadAjax(){
+     xhr.send();
+  }
   </script>
 </head>
 <body>
@@ -22,6 +24,7 @@
       <div class="contained">
         <div class="grid-100">
           <h1>Bring on the AJAX</h1>
+          <button id="load" onclick="loadAjax()">Go! </button>
           <ul id="ajax">
 
           </ul>
