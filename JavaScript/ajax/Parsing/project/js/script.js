@@ -44,4 +44,25 @@ xhr.onreadystatechange = function(){
 
 xhr.send(); //this step sends out the request 
 
+var rooms = new XMLHttpRequest();
+rooms.open('GET', 'data/rooms.json');
+rooms.onreadystatechange = function(){
+  if(rooms.readyState === 4 && rooms.status === 200){
+    var roomAll = JSON.parse(rooms.responseText);
+    var roomStatus = '<ul class="room">';
+    for(var i=0; i < roomAll.length; i++){
+      if(roomAll[i].available === true){
+        roomStatus += '<li class="empty">';
+      }
+      else{
+        roomStatus += '<li class="full">';
+      }
+      roomStatus += roomAll[i].room;
+      roomStatus += '</li>';
+    }
+    document.getElementById("roomList").innerHTML = roomStatus;
+  }
+};
+
+rooms.send();
 
