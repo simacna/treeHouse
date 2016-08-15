@@ -40,8 +40,6 @@ xhr.onreadystatechange = function(){
     document.getElementById('employeeList').innerHTML = statusHTML;
   }
 };
-
-
 xhr.send(); //this step sends out the request 
 
 var rooms = new XMLHttpRequest();

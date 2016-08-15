@@ -335,12 +335,12 @@ ul.rooms li {
   color: white;
     text-align: center;
 }
-li.empty{
+/*li.empty{
   background-color: #5fcf80;
 }
 li.full{
   background-color: #ed5a5a;
-}
+}*/
 ul.rooms li.empty {
   background-color: #5fcf80;
 }
